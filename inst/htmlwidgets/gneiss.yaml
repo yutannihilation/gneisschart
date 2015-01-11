@@ -1,0 +1,22 @@
+dependencies:
+- name: jquery
+  version: 1.8.3
+  src: htmlwidgets/lib/jquery
+  script: jquery.min.js
+- name: d3
+  version: 2.10.3
+  src: htmlwidgets/lib/d3
+  script: d3.v2.min.js
+- name: sugar
+  version: 1.4.1
+  src: htmlwidgets/lib/sugar
+  script: release/sugar.min.js
+- name: webfontloader
+  version: 1.5.11
+  src: htmlwidgets/lib/webfontloader
+  script: webfontloader.js
+- name: gneisschart
+  version: 0.6.3
+  src: htmlwidgets/lib/chartbuilder
+  script: js/gneisschart.js
+  style: css/gneisschart.css

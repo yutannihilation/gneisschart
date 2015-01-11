@@ -1,0 +1,14 @@
+{
+  "name": "webfontloader",
+  "homepage": "https://github.com/typekit/webfontloader",
+  "version": "1.5.11",
+  "_release": "1.5.11",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.11",
+    "commit": "83accfd884f7f0dec0b07a8e961b3e91c85a39f4"
+  },
+  "_source": "https://github.com/typekit/webfontloader.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/typekit/webfontloader.git"
+}
