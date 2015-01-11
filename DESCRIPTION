@@ -1,9 +1,13 @@
 Package: gneisschart
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: An R package for drawing charts by Quartz's Gneisschart
+Version: 0.0.1
 Date: 2015-01-10
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Hiroaki Yutani
+Maintainer: Hiroaki Yutani <yutani.ini@gmail.com>
+Description: For more details about Gneisschart/Chartbuilder, see https://github.com/Quartz/Chartbuilder
+License: MIT + file LICENSE
+Suggests:
+  knitr
+Imports:
+  htmlwidgets

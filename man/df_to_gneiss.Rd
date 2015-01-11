@@ -4,9 +4,21 @@
 \alias{df_to_gneiss}
 \title{Convert data.frame to gneiss Format}
 \usage{
-df_to_gneiss(df, label, type, credit, data_source)
+df_to_gneiss(data, label, type, data_source)
+}
+\arguments{
+\item{data}{data.frame}
+
+\item{label}{column name of labels}
+
+\item{type}{chart types}
+
+\item{data_source}{source of the data}
 }
 \description{
 Convert data.frame to gneiss Format
+}
+\seealso{
+\link{gneiss}
 }
 

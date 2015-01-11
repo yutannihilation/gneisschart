@@ -4,10 +4,55 @@
 \alias{gneiss}
 \title{Draw A Chart As Quartz Does}
 \usage{
-gneiss(x, label, type = "line", credit = "Gneisschart",
-  data_source = NULL, width = NULL, height = NULL)
+gneiss(data, label, type = "line", title = "",
+  credit = "Made with Gneisschart", data_source = "", y_ticks = 4,
+  y_prefix = "", y_suffix = "", y_limits = NULL, width = NULL,
+  height = NULL)
+}
+\arguments{
+\item{data}{data.frame}
+
+\item{label}{column name of labels}
+
+\item{type}{chart type(s). \code{"line"}, \code{"column"}, \code{"bargrid"} or \code{"scatter"}}
+
+\item{title}{title of the graph}
+
+\item{credit}{credit of the graph (e.g. "Made with Gneisschart")}
+
+\item{data_source}{source of the data (Something like "Data: Bureau of Labor Statistics"
+or "Data compiled by Factset")}
+
+\item{y_ticks}{number of ticks of y-axis}
+
+\item{y_prefix}{prefix unit of y-axis (e.g. $)}
+
+\item{y_suffix}{suffix unit of y-axis (e.g. k)}
+
+\item{y_limits}{lower and upper limits of y-axis (if not specified, this will be automatically
+calculated)}
+
+\item{width}{width of the graph}
+
+\item{height}{height of the graph}
 }
 \description{
-An R interface to gneisschart
+Draw a chart by Gneisschart from data.frame.
+}
+\examples{
+a <- data.frame(
+  names          = c("apples", "oranges"),
+  juicyness      = c(5.5, 23),
+  color          = c(10.2, 10),
+  favor          = c(6.1, 13),
+  travelablility = c(3.8, 7),
+  stringsAsFactors = FALSE
+)
+
+gneiss(a, label = "names")
+
+gneiss(a, label = "names", type = "column", credit = "Made w/o Chartbuilder")
+
+gneiss(a, label = "names", type = c("line","column"), title = "This is the very example chart!")
 }
 

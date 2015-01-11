@@ -1,17 +1,23 @@
 #' Convert data.frame to gneiss Format
 #' 
+#' @param data    data.frame
+#' @param label   column name of labels
+#' @param type    chart types
+#' @param data_source source of the data
+#' 
+#' @seealso \link{gneiss}
+#' 
 #' @export
-df_to_gneiss <- function(df, label, type, 
-                         title, credit, data_source){
-  if(length(type) == 1) type <- rep(type, nrow(df))
-  if(length(type) != nrow(df)) {
+df_to_gneiss <- function(data, label, type, data_source){
+  if(length(type) == 1) type <- rep(type, nrow(data))
+  if(length(type) != nrow(data)) {
     stop ("length of type must be the same as the number of rows of the data.frame")
   }
     
-  df_names       <- names(a)
-  label_index    <- which(df_names == label)
+  data_names       <- names(a)
+  label_index    <- which(data_names == label)
   
-  x_names        <- df_names[-label_index]
+  x_names        <- data_names[-label_index]
   label_names    <- unname(unlist(a[,  label_index]))
   values         <- a[, -label_index]
   
@@ -19,7 +25,7 @@ df_to_gneiss <- function(df, label, type,
     stop("All columns must be numeric, except for the label column.")
   }
   
-  ylim           <- c(min(values), max(values))
+  y_limits       <- c(min(values), max(values))
   
   series         <- lapply(1:nrow(values),
                            function(x) list(axis = 0, color = NULL,
@@ -28,10 +34,7 @@ df_to_gneiss <- function(df, label, type,
                                             source = data_source,
                                             type = type[x]))
   
-  list(x_names = x_names,
-       ylim    = ylim,
-       series  = series,
-       title   = title,
-       credit  = credit,
-       data_source = data_source)
+  list(x_names  = x_names,
+       y_limits = y_limits,
+       series   = series)
 }
