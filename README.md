@@ -23,3 +23,5 @@ devtools::install_github("yutannihilation/gneisschart")
 library(gneisschart)
 example(gneiss)
 ```
+![gneiss_line](gneiss_line.png)
+![gneiss_column](gneiss_column.png)
