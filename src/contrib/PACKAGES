@@ -1,0 +1,8 @@
+Package: gneisschart
+Version: 0.0.1
+Imports: htmlwidgets
+Suggests: knitr
+License: MIT + file LICENSE
+MD5sum: b647baca653c48e5122c875da51f535a
+NeedsCompilation: no
+
