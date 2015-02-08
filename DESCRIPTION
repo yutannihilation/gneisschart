@@ -1,8 +1,8 @@
 Package: gneisschart
 Type: Package
 Title: An R package for drawing charts by Quartz's Gneisschart
-Version: 0.0.1
-Date: 2015-01-10
+Version: 0.0.2
+Date: 2015-02-08
 Author: Hiroaki Yutani
 Maintainer: Hiroaki Yutani <yutani.ini@gmail.com>
 Description: For more details about Gneisschart/Chartbuilder, see https://github.com/Quartz/Chartbuilder
